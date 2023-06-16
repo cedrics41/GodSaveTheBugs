@@ -596,7 +596,7 @@ def visu_ronds(df):
 
 # -------------------------------------------------------------------------------
 # permet d'afficher notre logo sur la sidebar
-@st.cache_data
+@st.cache
 def add_logo(logo_path, width, height):
     #Lire et retourner l'image
     logo = Image.open(logo_path)
@@ -836,7 +836,16 @@ def report():
 # MAIN / HOME PAGE
 def main():
     my_logo = add_logo(logo_path="logo.png", width=150, height=150)
-    st.sidebar.image(my_logo) 
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.write(' ')
+
+    with col2:
+        st.sidebar.image(my_logo) 
+
+    with col3:
+        st.write(' ')
     # Vérifier si un fichier a été téléchargé
     uploaded_file = st.sidebar.file_uploader("Déposez votre fichier CSV pour analyse, ci-dessous.", type="csv",
                                              accept_multiple_files=False)
