@@ -835,7 +835,7 @@ def report():
 # -------------------------------------------------------------------------------
 # MAIN / HOME PAGE
 def main():
-    my_logo = add_logo(logo_path="logo.png", width=300, height=300)
+    my_logo = add_logo(logo_path="logo.png", width=150, height=150)
     st.sidebar.image(my_logo) 
     # Vérifier si un fichier a été téléchargé
     uploaded_file = st.sidebar.file_uploader("Déposez votre fichier CSV pour analyse, ci-dessous.", type="csv",
