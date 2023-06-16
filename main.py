@@ -705,7 +705,6 @@ def Data_and_Time():
 
 # -------------------------------------------------------------------------------
 # Page sur la présentation de l'équipe
-@st.cache_data
 def Page_team():
     st.markdown(f'''
             <h1 class=page-title>Qui sommes-nous ?</h1>
@@ -836,16 +835,7 @@ def report():
 # MAIN / HOME PAGE
 def main():
     my_logo = add_logo(logo_path="logo.png", width=150, height=150)
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.write(' ')
-
-    with col2:
-        st.sidebar.image(my_logo) 
-
-    with col3:
-        st.write(' ')
+    st.sidebar.image(my_logo) 
     # Vérifier si un fichier a été téléchargé
     uploaded_file = st.sidebar.file_uploader("Déposez votre fichier CSV pour analyse, ci-dessous.", type="csv",
                                              accept_multiple_files=False)
