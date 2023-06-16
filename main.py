@@ -596,7 +596,7 @@ def visu_ronds(df):
 
 # -------------------------------------------------------------------------------
 # permet d'afficher notre logo sur la sidebar
-@st.cache
+@st.cache_data
 def add_logo(logo_path, width, height):
     #Lire et retourner l'image
     logo = Image.open(logo_path)
