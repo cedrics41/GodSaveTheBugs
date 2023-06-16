@@ -705,6 +705,7 @@ def Data_and_Time():
 
 # -------------------------------------------------------------------------------
 # Page sur la présentation de l'équipe
+@st.cache_data
 def Page_team():
     st.markdown(f'''
             <h1 class=page-title>Qui sommes-nous ?</h1>
