@@ -6,17 +6,17 @@ import numpy as np
 #import matplotlib.pyplot as plt
 #import seaborn as sns
 import plotly.express as px
-import datetime
+#import datetime
 from datetime import date
-import calendar
-import time
+#import calendar
+#import time
 from PIL import Image#, ImageGrab
 from zipfile import ZipFile
 from base64 import b64encode
 from fpdf import FPDF, HTMLMixin
 #import tempfile
 import plotly.graph_objects as go
-import plotly.subplots as sp
+#import plotly.subplots as sp
 import base64
 import os
 from tabulate import tabulate
@@ -1029,7 +1029,7 @@ def generate_report(color_map):
     formatted_date = today.strftime("%Y-%m-%d")
 
     # Save the PDF document with the date in the filename
-    report_filename = f"report_{formatted_date}.pdf"
+    report_filename = f"Report_{formatted_date}.pdf"
     pdf.output(report_filename)
 
     return report_filename
