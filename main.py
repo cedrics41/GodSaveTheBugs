@@ -1136,9 +1136,6 @@ def main():
     # Vérifier si un fichier a été téléchargé
     uploaded_file = st.sidebar.file_uploader("Déposez votre fichier CSV pour analyse, ci-dessous.", type="csv",
                                              accept_multiple_files=False, key=1)
-    # Vérifier si un fichier a été téléchargé
-    uploaded_file = st.sidebar.file_uploader("Déposez votre fichier CSV pour analyse, ci-dessous.", type="csv",
-                                             accept_multiple_files=False,key=2)
     if uploaded_file:
         df = read_csv(uploaded_file)
 
