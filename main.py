@@ -1071,7 +1071,7 @@ def report():
             nb_indiv = len(df_filtered)
 
             # Obtenir la plage de la colonne Time
-            df_filtered['Time'] = pd.to_datetime(df_filtered['Time'])
+            df_filtered['Time'] = pd.to_datetime(df_filtered['Time'],dayfirst=True)
             plage_time = (df_filtered['Time'].min(), df_filtered['Time'].max())
 
             # Indice de biodiversité sur le nombre d'espèces différentes dans l'environnment
