@@ -965,7 +965,7 @@ def generate_report(color_map):
     text_x = 135  # Coordonnée X du coin supérieur gauche du rectangle
     text_y = 100  # Coordonnée Y du coin supérieur gauche du rectangle
     # Obtenir la plage de la colonne Time
-    df_filtered['Time'] = pd.to_datetime(df_filtered['Time'])
+    df_filtered['Time'] = pd.to_datetime(df_filtered['Time'],dayfirst=True)
     plage_time = (df_filtered['Time'].min(), df_filtered['Time'].max())
     # Phrase descriptive
     phrase_info = f"Vos données sont basées sur des dates du {plage_time[0].strftime('%d/%m/%Y')} au {plage_time[1].strftime('%d/%m/%Y')}"
