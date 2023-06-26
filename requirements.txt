@@ -9,3 +9,5 @@ Pillow
 zipfile36
 pybase64
 fpdf
+kaleido
+tabulate
